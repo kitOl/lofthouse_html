@@ -151,9 +151,10 @@ a:hover {
   white-space: nowrap;
 }
 
-.header,
-.benefits,
-.apartements- {
+.header-,
+.benefits-,
+.apartments-,
+.cta- {
   display: none !important;
 }
 
@@ -328,4 +329,82 @@ a:hover {
   bottom: 44px;
   font-size: 24px;
   font-family: "Raleway", sans-serif;
+}
+
+.cta {
+  padding: 180px 0;
+  background: linear-gradient(180deg, #242b33 10.42%, rgba(36, 43, 51, 0) 50.52%, #242b33 90.1%), linear-gradient(0deg, rgba(36, 43, 51, 0.9) 0%, rgba(36, 43, 51, 0.9) 100%), url("./../img/cta/cta-bg.jpg"), #c4c4c4;
+}
+
+.cta__title {
+  margin-bottom: 17px;
+}
+
+.cta__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.cta__text {
+  max-width: 540px;
+  line-height: 1.5; /* 150% */
+}
+.cta__text p + p {
+  margin-top: 1em;
+}
+
+.cta__form {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 35px 30px;
+}
+
+.form {
+  align-items: center;
+}
+
+.form__input {
+  width: 255px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  line-height: 1.93;
+  transition: bacground-color 0.2s ease-in;
+}
+.form__input::-moz-placeholder {
+  color: #bebebe;
+  line-height: 1.93; /* 192.857% */
+}
+.form__input::placeholder {
+  color: #bebebe;
+  line-height: 1.93; /* 192.857% */
+}
+.form__input:focus {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.form__privacy {
+  width: 255px;
+  color: #e7e7e7;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.23; /* 123.077% */
+}
+
+.form__btn {
+  width: 255px;
+  height: 50px;
+  padding: 11px 54px;
+  background-color: rgba(212, 193, 127, 0.7);
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  transition: bacground-color 0.2s ease-in;
+}
+.form__btn:hover {
+  background-color: rgba(229, 202, 110, 0.7);
 }/*# sourceMappingURL=main.css.map */

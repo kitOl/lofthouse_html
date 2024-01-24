@@ -1,0 +1,58 @@
+.cta__form {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 35px 30px;
+}
+
+.form {
+  align-items: center;
+}
+
+.form__input {
+  width: 255px;
+  height: 50px;
+
+  color: $white;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+
+  font-size: 14px;
+  line-height: 1.93;
+  transition: bacground-color 0.2s ease-in;
+
+  &::placeholder {
+    color: $placeholder;
+    line-height: 1.93; /* 192.857% */
+  }
+
+  &:focus {
+    background: rgba(255, 255, 255, 0.25);
+  }
+}
+
+.form__privacy {
+  width: 255px;
+
+  color: $privacy;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.23; /* 123.077% */
+}
+
+.form__btn {
+  width: 255px;
+  height: 50px;
+  padding: 11px 54px;
+  //   background-color: $accent;
+  background-color: rgba(212, 193, 127, 0.7);
+
+  font-size: 16px;
+  font-weight: 700;
+  color: $white;
+  text-align: center;
+  transition: bacground-color 0.2s ease-in;
+
+  &:hover {
+    background-color: saturate($color: rgba(212, 193, 127, 0.7), $amount: 20%);
+  }
+}
