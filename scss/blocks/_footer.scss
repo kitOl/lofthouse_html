@@ -1,13 +1,22 @@
 .footer {
+  padding: 72px 0 51px;
   background-color: $footer-bg;
+
+  @include mediaTablet {
+    padding: 36px 0 26px;
+  }
 }
 
 .footer__wrapper {
-  padding: 72px 0 51px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   //   align-items: start;
+
+  @include mediaTablet {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 50px;
+  }
 }
 
 .footer__logo {
