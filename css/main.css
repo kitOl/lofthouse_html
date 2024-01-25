@@ -155,8 +155,8 @@ a:hover {
 .benefits,
 .apartments,
 .cta,
-.video-,
-.section-map,
+.video,
+.section-map-,
 .feedback,
 .footer {
   display: none !important;
@@ -743,9 +743,19 @@ a:hover {
   font-family: "Playfair Display", serif;
   color: #fff;
 }
+@media screen and (max-width: 959px) {
+  .section-map {
+    padding: 90px 0;
+  }
+}
 
 .map__title {
   margin-bottom: 88px;
+}
+@media screen and (max-width: 959px) {
+  .map__title {
+    margin-bottom: 44px;
+  }
 }
 
 .map {
