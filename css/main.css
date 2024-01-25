@@ -245,7 +245,21 @@ a:hover {
 }
 
 .benefits {
+  position: relative;
   padding: 120px 0;
+}
+.benefits::after {
+  content: "II";
+  opacity: 0.02;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% + 550px);
+  transform: translate(-50%, 0%);
+  line-height: 1;
+  font-size: 400px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  color: #fff;
 }
 
 .benefits__row {
@@ -270,6 +284,23 @@ a:hover {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.35; /* 135% */
+}
+
+.apartments {
+  position: relative;
+}
+.apartments::before {
+  content: "III";
+  opacity: 0.02;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(20%, 0%);
+  line-height: 1;
+  font-size: 400px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  color: #fff;
 }
 
 .apartments__title {
@@ -415,7 +446,21 @@ a:hover {
 }
 
 .video {
+  position: relative;
   text-align: center;
+}
+.video::after {
+  content: "IV";
+  opacity: 0.02;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 550px);
+  transform: translate(-50%, -50%);
+  line-height: 1;
+  font-size: 400px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  color: #fff;
 }
 
 .video__link {
@@ -451,7 +496,22 @@ a:hover {
 }
 
 .section-map {
+  position: relative;
   padding: 180px 0;
+}
+.section-map::after {
+  content: "V";
+  opacity: 0.02;
+  position: absolute;
+  z-index: -1;
+  top: 45%;
+  right: calc(50% + 550px);
+  transform: translate(50%, -50%);
+  line-height: 1;
+  font-size: 400px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  color: #fff;
 }
 
 .map__title {
