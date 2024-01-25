@@ -153,8 +153,8 @@ a:hover {
 
 .header,
 .benefits,
-.apartments-,
-.cta,
+.apartments,
+.cta-,
 .video,
 .section-map,
 .feedback,
@@ -559,6 +559,23 @@ a:hover {
   padding: 180px 0;
   background: linear-gradient(180deg, #242b33 10.42%, rgba(36, 43, 51, 0) 50.52%, #242b33 90.1%), linear-gradient(0deg, rgba(36, 43, 51, 0.9) 0%, rgba(36, 43, 51, 0.9) 100%), url("./../img/cta/cta-bg.jpg"), #c4c4c4;
 }
+@media screen and (max-width: 959px) {
+  .cta {
+    padding: 60px 0;
+    text-align: center;
+  }
+}
+
+.cta__form {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 35px 30px;
+}
+@media screen and (max-width: 959px) {
+  .cta__form {
+    grid-template-columns: 1fr;
+  }
+}
 
 .cta__title {
   margin-bottom: 17px;
@@ -569,6 +586,11 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+@media screen and (max-width: 959px) {
+  .cta__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 
 .cta__text {
   max-width: 540px;
@@ -577,15 +599,21 @@ a:hover {
 .cta__text p + p {
   margin-top: 1em;
 }
-
-.cta__form {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  gap: 35px 30px;
+@media screen and (max-width: 959px) {
+  .cta__text {
+    max-width: 390px;
+    font-size: 14px;
+    margin: 0 auto;
+  }
 }
 
 .form {
   align-items: center;
+}
+@media screen and (max-width: 959px) {
+  .form {
+    margin: 0 auto;
+  }
 }
 
 .form__input {
@@ -616,6 +644,11 @@ a:hover {
   text-align: center;
   font-size: 13px;
   line-height: 1.23; /* 123.077% */
+}
+@media screen and (max-width: 959px) {
+  .form__privacy--cta {
+    order: 1;
+  }
 }
 
 .form__btn {
