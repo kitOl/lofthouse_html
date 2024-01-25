@@ -1,5 +1,10 @@
 .feedback {
   padding: 0 0 180px;
+
+  @include mediaTablet {
+    padding: 0 0 90px;
+    text-align: center;
+  }
 }
 
 .feedback__title {
@@ -11,4 +16,15 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   align-items: center;
+
+  @include mediaTablet {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+}
+
+.form__privacy--feedback {
+  @include mediaTablet {
+    order: 1;
+  }
 }

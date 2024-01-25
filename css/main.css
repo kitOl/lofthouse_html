@@ -156,8 +156,8 @@ a:hover {
 .apartments,
 .cta,
 .video,
-.section-map-,
-.feedback,
+.section-map,
+.feedback-,
 .footer {
   display: none !important;
 }
@@ -612,7 +612,7 @@ a:hover {
 }
 @media screen and (max-width: 959px) {
   .form {
-    margin: 0 auto;
+    justify-items: center;
   }
 }
 
@@ -767,6 +767,12 @@ a:hover {
 .feedback {
   padding: 0 0 180px;
 }
+@media screen and (max-width: 959px) {
+  .feedback {
+    padding: 0 0 90px;
+    text-align: center;
+  }
+}
 
 .feedback__title {
   margin-bottom: 38px;
@@ -777,6 +783,18 @@ a:hover {
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   align-items: center;
+}
+@media screen and (max-width: 959px) {
+  .feedback__form {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .form__privacy--feedback {
+    order: 1;
+  }
 }
 
 .footer {
