@@ -4,17 +4,11 @@
 
   &::after {
     content: "IV";
-    opacity: 0.02;
-    position: absolute;
     top: 50%;
     left: calc(50% + 550px);
     transform: translate(-50%, -50%);
-    line-height: 1;
 
-    font-size: 400px;
-    font-weight: 700;
-    font-family: $font-accent;
-    color: $white;
+    @include mixins;
   }
 }
 

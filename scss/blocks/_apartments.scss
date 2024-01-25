@@ -3,18 +3,12 @@
 
   &::before {
     content: "III";
-    opacity: 0.02;
-    position: absolute;
     top: 0;
     left: 0;
     // left: calc(50% + 550px);
     transform: translate(20%, 0%);
-    line-height: 1;
 
-    font-size: 400px;
-    font-weight: 700;
-    font-family: $font-accent;
-    color: $white;
+    @include mixins;
   }
 }
 .apartments__title {

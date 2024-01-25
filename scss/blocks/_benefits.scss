@@ -4,17 +4,11 @@
 
   &::after {
     content: "II";
-    opacity: 0.02;
-    position: absolute;
     bottom: 0;
     left: calc(50% + 550px);
     transform: translate(-50%, 0%);
-    line-height: 1;
 
-    font-size: 400px;
-    font-weight: 700;
-    font-family: $font-accent;
-    color: $white;
+    @include decorNumber;
   }
 }
 
