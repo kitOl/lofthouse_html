@@ -9,6 +9,10 @@
 
 .feedback__title {
   margin-bottom: 38px;
+
+  @media (max-width: 1100px) {
+    text-align: center;
+  }
 }
 
 .feedback__form {
@@ -17,13 +21,22 @@
   gap: 30px;
   align-items: center;
 
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 2fr);
+    justify-items: center;
+  }
+
   @include mediaTablet {
     grid-template-columns: 1fr;
-    margin: 0 auto;
+    // margin: 0 auto;
   }
 }
 
 .form__privacy--feedback {
+  @media (max-width: 1100px) {
+    order: 1;
+  }
+
   @include mediaTablet {
     order: 1;
   }

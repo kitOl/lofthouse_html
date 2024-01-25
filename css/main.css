@@ -151,13 +151,13 @@ a:hover {
   white-space: nowrap;
 }
 
-.header,
-.benefits,
-.apartments,
-.cta,
-.video,
-.section-map,
-.feedback,
+.header-,
+.benefits-,
+.apartments-,
+.cta-,
+.video-,
+.section-map-,
+.feedback-,
 .footer- {
   display: none !important;
 }
@@ -777,6 +777,11 @@ a:hover {
 .feedback__title {
   margin-bottom: 38px;
 }
+@media (max-width: 1100px) {
+  .feedback__title {
+    text-align: center;
+  }
+}
 
 .feedback__form {
   display: grid;
@@ -784,13 +789,23 @@ a:hover {
   gap: 30px;
   align-items: center;
 }
+@media (max-width: 1100px) {
+  .feedback__form {
+    grid-template-columns: repeat(2, 2fr);
+    justify-items: center;
+  }
+}
 @media screen and (max-width: 959px) {
   .feedback__form {
     grid-template-columns: 1fr;
-    margin: 0 auto;
   }
 }
 
+@media (max-width: 1100px) {
+  .form__privacy--feedback {
+    order: 1;
+  }
+}
 @media screen and (max-width: 959px) {
   .form__privacy--feedback {
     order: 1;
