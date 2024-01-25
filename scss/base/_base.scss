@@ -48,9 +48,9 @@ a {
   white-space: nowrap;
 }
 
-.header-,
-.benefits-,
-.apartments,
+.header,
+.benefits,
+.apartments-,
 .cta,
 .video,
 .section-map,
@@ -64,6 +64,10 @@ a {
   font-family: $font-accent;
   font-weight: 700;
   color: $accent;
+
+  @include mediaTablet {
+    font-size: 28px;
+  }
 }
 
 .no-scroll {

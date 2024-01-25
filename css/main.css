@@ -151,9 +151,9 @@ a:hover {
   white-space: nowrap;
 }
 
-.header-,
-.benefits-,
-.apartments,
+.header,
+.benefits,
+.apartments-,
 .cta,
 .video,
 .section-map,
@@ -168,6 +168,11 @@ a:hover {
   font-weight: 700;
   color: #d4c17f;
 }
+@media screen and (max-width: 959px) {
+  .title-2 {
+    font-size: 28px;
+  }
+}
 
 .no-scroll {
   overflow: hidden;
@@ -181,7 +186,7 @@ a:hover {
   min-height: 840px;
   background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%), url(./../img/header/header-bg.jpg), lightgray 50%/cover no-repeat;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header {
     min-height: unset;
     row-gap: 50px;
@@ -223,7 +228,7 @@ a:hover {
   right: 15px;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header__nav {
     display: none;
   }
@@ -232,7 +237,7 @@ a:hover {
 .header__nav-btn {
   display: none;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header__nav-btn {
     display: block;
   }
@@ -247,7 +252,7 @@ a:hover {
   font-weight: 700;
   padding-bottom: 121px;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header__title {
     font-size: 32px;
     padding-bottom: 100px;
@@ -268,7 +273,7 @@ a:hover {
   -moz-column-gap: 98px;
        column-gap: 98px;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header__bottom {
     display: flex;
     flex-direction: column;
@@ -370,7 +375,7 @@ a:hover {
 .info--tel::before {
   background-image: url(./../img/header/phone.svg);
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .info {
     font-size: 16px;
   }
@@ -398,7 +403,7 @@ a:hover {
   font-family: "Playfair Display", serif;
   color: #fff;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .benefits {
     padding: 70px 0;
   }
@@ -410,7 +415,7 @@ a:hover {
   -moz-column-gap: 70px;
        column-gap: 70px;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .benefits__row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -425,7 +430,7 @@ a:hover {
 .benefits__item-img {
   margin-bottom: 53px;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .benefits__item-img {
     width: 60px;
     height: 60px;
@@ -441,7 +446,7 @@ a:hover {
   font-weight: 300;
   line-height: 1.35; /* 135% */
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .benefits__item-text {
     font-size: 16px;
   }
@@ -464,15 +469,30 @@ a:hover {
   font-family: "Playfair Display", serif;
   color: #fff;
 }
+@media screen and (max-width: 959px) {
+  .apartments {
+    overflow: hidden;
+  }
+}
 
 .apartments__title {
   margin-bottom: 88px;
+}
+@media screen and (max-width: 959px) {
+  .apartments__title {
+    margin-bottom: 44px;
+  }
 }
 
 .apartments__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+}
+@media screen and (max-width: 959px) {
+  .apartments__cards {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
 }
 
 .card {
@@ -526,7 +546,13 @@ a:hover {
   left: 50px;
   bottom: 44px;
   font-size: 24px;
-  font-family: "Raleway", sans-serif;
+}
+@media screen and (max-width: 959px) {
+  .card__title {
+    font-size: 20px;
+    left: 30px;
+    bottom: 30px;
+  }
 }
 
 .cta {
