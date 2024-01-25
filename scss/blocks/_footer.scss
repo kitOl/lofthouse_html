@@ -1,0 +1,51 @@
+.footer {
+  background-color: $footer-bg;
+}
+
+.footer__wrapper {
+  padding: 72px 0 51px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  //   align-items: start;
+}
+
+.footer__logo {
+  margin-top: -12px;
+}
+
+.footer__nav .nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer__contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  font-size: 14px;
+  letter-spacing: 0.7px;
+}
+
+.footer__email {
+  font-weight: 700;
+  color: $accent;
+  transition: contrast 0.2s ease-in;
+
+  &:hover {
+    filter: contrast(1.2);
+  }
+}
+
+.footer__socials {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+  transition: opacity 0.2s ease-in;
+
+  & a:hover {
+    opacity: 0.8;
+  }
+}
