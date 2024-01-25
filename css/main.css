@@ -153,12 +153,12 @@ a:hover {
 
 .header-,
 .benefits-,
-.apartments-,
-.cta-,
-.video-,
-.section-map-,
-.feedback-,
-.footer- {
+.apartments,
+.cta,
+.video,
+.section-map,
+.feedback,
+.footer {
   display: none !important;
 }
 
@@ -169,6 +169,10 @@ a:hover {
   color: #d4c17f;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -177,11 +181,61 @@ a:hover {
   min-height: 840px;
   background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%), url(./../img/header/header-bg.jpg), lightgray 50%/cover no-repeat;
 }
+@media screen and (max-width: 999px) {
+  .header {
+    min-height: unset;
+    row-gap: 50px;
+  }
+}
 
 .header__top-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__top-row--mobile {
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #242b33;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 60px;
+  padding: 40px 0;
+}
+.header__top-row--mobile .header__nav {
+  display: block;
+}
+.header__top-row--mobile .nav__list {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.header__top-row--mobile .header__nav-btn {
+  position: fixed;
+  top: 50px;
+  right: 15px;
+}
+
+@media screen and (max-width: 999px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+.header__nav-btn {
+  display: none;
+}
+@media screen and (max-width: 999px) {
+  .header__nav-btn {
+    display: block;
+  }
 }
 
 .header__title {
@@ -192,6 +246,12 @@ a:hover {
   color: #d4c17f;
   font-weight: 700;
   padding-bottom: 121px;
+}
+@media screen and (max-width: 999px) {
+  .header__title {
+    font-size: 32px;
+    padding-bottom: 100px;
+  }
 }
 
 .header__title-icon {
@@ -208,6 +268,13 @@ a:hover {
   -moz-column-gap: 98px;
        column-gap: 98px;
 }
+@media screen and (max-width: 999px) {
+  .header__bottom {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
 
 .nav {
   font-size: 14px;
@@ -218,6 +285,65 @@ a:hover {
   display: flex;
   -moz-column-gap: 40px;
        column-gap: 40px;
+}
+
+.nav-icon-btn {
+  --time: 0.1s;
+  --width: 40px;
+  --height: 30px;
+  --line-height: 1px;
+  --line-margin: 2;
+  --color: #fff;
+  height: var(--height);
+  width: var(--width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.nav-icon::before {
+  top: calc(var(--line-height) * -8);
+}
+
+.nav-icon::after {
+  top: calc(var(--line-height) * 8);
+}
+
+.nav-icon.nav-icon--active {
+  background-color: transparent;
+}
+
+.nav-icon.nav-icon--active::before,
+.nav-icon.nav-icon--active::after {
+  top: 0;
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+.nav-icon.nav-icon--active::before {
+  transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon--active::after {
+  transform: rotate(-45deg);
 }
 
 .info {
@@ -236,12 +362,21 @@ a:hover {
   width: 21px;
   height: 21px;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .info--map::before {
   background-image: url(./../img/header/map.svg);
 }
 .info--tel::before {
   background-image: url(./../img/header/phone.svg);
+}
+@media screen and (max-width: 999px) {
+  .info {
+    font-size: 16px;
+  }
+  .info--map, .info--tel {
+    padding-left: 30px;
+  }
 }
 
 .benefits {
@@ -254,6 +389,7 @@ a:hover {
   left: calc(50% + 550px);
   transform: translate(-50%, 0%);
   position: absolute;
+  z-index: -1;
   line-height: 1;
   opacity: 0.02;
   font-size: 400px;
@@ -291,12 +427,13 @@ a:hover {
 }
 .apartments::before {
   content: "III";
-  opacity: 0.02;
-  position: absolute;
   top: 0;
   left: 0;
   transform: translate(20%, 0%);
+  position: absolute;
+  z-index: -1;
   line-height: 1;
+  opacity: 0.02;
   font-size: 400px;
   font-weight: 700;
   font-family: "Playfair Display", serif;
@@ -451,12 +588,13 @@ a:hover {
 }
 .video::after {
   content: "IV";
-  opacity: 0.02;
-  position: absolute;
   top: 50%;
   left: calc(50% + 550px);
   transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: -1;
   line-height: 1;
+  opacity: 0.02;
   font-size: 400px;
   font-weight: 700;
   font-family: "Playfair Display", serif;
@@ -501,13 +639,14 @@ a:hover {
 }
 .section-map::after {
   content: "V";
-  opacity: 0.02;
-  position: absolute;
   z-index: -1;
   top: 45%;
   right: calc(50% + 550px);
   transform: translate(50%, -50%);
+  position: absolute;
+  z-index: -1;
   line-height: 1;
+  opacity: 0.02;
   font-size: 400px;
   font-weight: 700;
   font-family: "Playfair Display", serif;

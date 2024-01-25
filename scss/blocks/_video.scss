@@ -8,7 +8,7 @@
     left: calc(50% + 550px);
     transform: translate(-50%, -50%);
 
-    @include mixins;
+    @include decorNumber;
   }
 }
 

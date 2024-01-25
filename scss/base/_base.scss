@@ -50,12 +50,12 @@ a {
 
 .header-,
 .benefits-,
-.apartments-,
-.cta-,
-.video-,
-.section-map-,
-.feedback-,
-.footer- {
+.apartments,
+.cta,
+.video,
+.section-map,
+.feedback,
+.footer {
   display: none !important;
 }
 
@@ -64,4 +64,8 @@ a {
   font-family: $font-accent;
   font-weight: 700;
   color: $accent;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
