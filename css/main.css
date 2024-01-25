@@ -380,6 +380,7 @@ a:hover {
 }
 
 .benefits {
+  overflow: hidden;
   position: relative;
   padding: 120px 0;
 }
@@ -397,12 +398,24 @@ a:hover {
   font-family: "Playfair Display", serif;
   color: #fff;
 }
+@media screen and (max-width: 999px) {
+  .benefits {
+    padding: 70px 0;
+  }
+}
 
 .benefits__row {
   display: flex;
   justify-content: space-between;
   -moz-column-gap: 70px;
        column-gap: 70px;
+}
+@media screen and (max-width: 999px) {
+  .benefits__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 50px 30px;
+  }
 }
 
 .benefits__item {
@@ -412,6 +425,13 @@ a:hover {
 .benefits__item-img {
   margin-bottom: 53px;
 }
+@media screen and (max-width: 999px) {
+  .benefits__item-img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+}
 
 .benefits__item-text {
   color: #fff;
@@ -420,6 +440,11 @@ a:hover {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.35; /* 135% */
+}
+@media screen and (max-width: 999px) {
+  .benefits__item-text {
+    font-size: 16px;
+  }
 }
 
 .apartments {
